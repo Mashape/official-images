@@ -3,11 +3,13 @@ GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
 Tags: 1.0.0-alpine, 1.0.0, 1.0, latest
-GitCommit: c85480342f95c717f973ebc434e1ed20295ea4bb
+GitFetch: refs/tags/1.0.0
+GitCommit: 57b036f6d4bae2ab3364aed01b4d878d11a45d3e
 Directory: alpine
 
 Tags: 1.0.0-centos, 1.0-centos
-GitCommit: c85480342f95c717f973ebc434e1ed20295ea4bb
+GitFetch: refs/tags/1.0.0
+GitCommit: 57b036f6d4bae2ab3364aed01b4d878d11a45d3e
 Constraints: !aufs
 Directory: centos
 
@@ -35,6 +37,17 @@ Directory: alpine
 
 Tags: 1.0.0rc2-centos, 1.0rc2-centos
 GitCommit: e200d692b453f308d33f3f552293b66a47bee5ed
+Constraints: !aufs
+Directory: centos
+
+Tags: 0.15.0-alpine, 0.15-alpine, 0.15.0, 0.15
+GitFetch: refs/tags/0.15.0
+GitCommit: dfa76d82297f7d15cc6aa8c261f58ff5eb22dbe3
+Directory: alpine
+
+Tags: 0.15.0-centos, 0.15-centos
+GitFetch: refs/tags/0.15.0
+GitCommit: dfa76d82297f7d15cc6aa8c261f58ff5eb22dbe3
 Constraints: !aufs
 Directory: centos
 
