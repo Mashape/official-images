@@ -17,7 +17,7 @@ Tags: 3.0.2-alpine, 3.0-alpine, 3.0.2, 3.0
 GitCommit: 2266a0d3e0238e71ed2992ca9ad2453c59af37f6
 GitFetch: refs/tags/3.0.2
 File: Dockerfile.apk
-Architectures: amd64
+Architectures: amd64, arm64v8
 
 Tags: 3.0.2-ubuntu, 3.0-ubuntu
 GitCommit: 2266a0d3e0238e71ed2992ca9ad2453c59af37f6
