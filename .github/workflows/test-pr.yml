@@ -22,6 +22,7 @@ permissions:
 jobs:
 
   naughty:
+    timeout-minutes: ${{ fromJSON(vars.GHA_DEFAULT_TIMEOUT) }}
     name: Naughty
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +34,7 @@ jobs:
         run: .github/workflows/naughty.sh
 
   generate-jobs:
+    timeout-minutes: ${{ fromJSON(vars.GHA_DEFAULT_TIMEOUT) }}
     name: Generate Jobs
     runs-on: ubuntu-latest
     outputs:
@@ -53,6 +55,7 @@ jobs:
           echo "length=$length" >> "$GITHUB_OUTPUT"
 
   test:
+    timeout-minutes: ${{ fromJSON(vars.GHA_DEFAULT_TIMEOUT) }}
     needs: generate-jobs
     strategy: ${{ fromJSON(needs.generate-jobs.outputs.strategy) }}
     if: needs.generate-jobs.outputs.length > 0
